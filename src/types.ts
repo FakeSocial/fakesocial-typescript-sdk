@@ -1,12 +1,18 @@
 export enum HttpMethod {
-  GET = 'GET',
-  POST = 'POST',
-  PUT = 'PUT',
-  PATCH = 'PATCH',
-  DELETE = 'DELETE',
+  GET = "GET",
+  POST = "POST",
+  PUT = "PUT",
+  PATCH = "PATCH",
+  DELETE = "DELETE",
 }
 
-export type QueryValue = string | number | boolean | null | undefined | Array<string | number | boolean>;
+export type QueryValue =
+  | string
+  | number
+  | boolean
+  | null
+  | undefined
+  | Array<string | number | boolean>;
 export type QueryParams = Record<string, QueryValue>;
 
 export interface ClientOptions {
@@ -53,15 +59,26 @@ export interface AuthSignupInput {
 }
 
 export enum ForgotPasswordAction {
-  Send = 'send',
-  Verify = 'verify',
-  Reset = 'reset',
+  Send = "send",
+  Verify = "verify",
+  Reset = "reset",
 }
 
 export type ForgotPasswordInput =
-  | { action: ForgotPasswordAction.Send; username?: string; email?: string; captchaToken?: string }
+  | {
+      action: ForgotPasswordAction.Send;
+      username?: string;
+      email?: string;
+      captchaToken?: string;
+    }
   | { action: ForgotPasswordAction.Verify; username: string; code: string }
-  | { action: ForgotPasswordAction.Reset; username: string; code: string; newPassword: string; captchaToken?: string };
+  | {
+      action: ForgotPasswordAction.Reset;
+      username: string;
+      code: string;
+      newPassword: string;
+      captchaToken?: string;
+    };
 
 export interface ResetPasswordInput {
   currentPassword: string;

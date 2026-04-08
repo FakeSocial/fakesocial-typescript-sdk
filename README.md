@@ -17,11 +17,11 @@ bun run check
 ## Utilisation
 
 ```ts
-import { createFakeMediaClient } from './index';
+import { createFakeMediaClient } from "./index";
 
 const client = createFakeMediaClient({
-	baseUrl: 'https://example.com',
-	token: 'user-or-access-token',
+  baseUrl: "https://example.com",
+  token: "user-or-access-token",
 });
 
 const me = await client.me.get();

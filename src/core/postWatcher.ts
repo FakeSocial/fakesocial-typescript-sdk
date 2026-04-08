@@ -1,7 +1,7 @@
-import type { PostItem, PostWatcherOptions } from '../types';
-import type { TransportLike } from './transport';
+import type { PostItem, PostWatcherOptions } from "../types";
+import type { TransportLike } from "./transport";
 
-export type PostWatcherEvent = 'new-posts';
+export type PostWatcherEvent = "new-posts";
 export type PostWatcherListener = (posts: PostItem[]) => void;
 
 export class PostWatcher {
@@ -10,7 +10,10 @@ export class PostWatcher {
   private readonly limit: number;
   private readonly intervalMs: number;
   private readonly emitInitial: boolean;
-  private readonly listeners = new Map<PostWatcherEvent, Set<PostWatcherListener>>();
+  private readonly listeners = new Map<
+    PostWatcherEvent,
+    Set<PostWatcherListener>
+  >();
   private readonly knownPostIds = new Set<string>();
   private timer: ReturnType<typeof setTimeout> | null = null;
   private running = false;
@@ -60,7 +63,7 @@ export class PostWatcher {
 
   async poll(): Promise<void> {
     const query = { ...this.query, limit: this.limit };
-    const posts = await this.transport.get<PostItem[]>('/api/posts', { query });
+    const posts = await this.transport.get<PostItem[]>("/api/posts", { query });
 
     if (!Array.isArray(posts)) {
       this.scheduleNext();
@@ -82,10 +85,10 @@ export class PostWatcher {
     if (!this.firstPollCompleted) {
       this.firstPollCompleted = true;
       if (this.emitInitial && newPosts.length > 0) {
-        this.emitEvent('new-posts', [...newPosts]);
+        this.emitEvent("new-posts", [...newPosts]);
       }
     } else if (newPosts.length > 0) {
-      this.emitEvent('new-posts', [...newPosts]);
+      this.emitEvent("new-posts", [...newPosts]);
     }
 
     for (const post of newPosts) {
@@ -106,11 +109,11 @@ export class PostWatcher {
   }
 
   private getPostId(post: PostItem): string | undefined {
-    if (typeof post._id === 'string' && post._id.length > 0) {
+    if (typeof post._id === "string" && post._id.length > 0) {
       return post._id;
     }
 
-    if (typeof post.id === 'string' && post.id.length > 0) {
+    if (typeof post.id === "string" && post.id.length > 0) {
       return post.id;
     }
 
@@ -139,6 +142,9 @@ export class PostWatcher {
   }
 }
 
-export function createPostWatcher(transport: TransportLike, options: PostWatcherOptions = {}) {
+export function createPostWatcher(
+  transport: TransportLike,
+  options: PostWatcherOptions = {},
+) {
   return new PostWatcher(transport, options);
 }

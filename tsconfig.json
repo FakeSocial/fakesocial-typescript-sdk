@@ -1,10 +1,7 @@
 {
   "compilerOptions": {
     // Environment setup & latest features
-    "lib": [
-      "ESNext",
-      "DOM"
-    ],
+    "lib": ["ESNext", "DOM"],
     "target": "ESNext",
     "module": "Preserve",
     "moduleDetection": "force",
@@ -15,10 +12,7 @@
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "noEmit": true,
-    "types": [
-      "bun",
-      "node"
-    ],
+    "types": ["bun", "node"],
     // Best practices
     "strict": true,
     "skipLibCheck": true,
@@ -30,13 +24,6 @@
     "noUnusedParameters": false,
     "noPropertyAccessFromIndexSignature": false
   },
-  "include": [
-    "src/**/*.ts",
-    "tests/**/*.ts",
-    "index.ts"
-  ],
-  "exclude": [
-    "inspiration",
-    "node_modules"
-  ]
+  "include": ["src/**/*.ts", "tests/**/*.ts", "index.ts"],
+  "exclude": ["inspiration", "node_modules"]
 }
