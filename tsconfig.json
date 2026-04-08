@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     // Environment setup & latest features
-    "lib": ["ESNext"],
+    "lib": ["ESNext", "DOM"],
     "target": "ESNext",
     "module": "Preserve",
     "moduleDetection": "force",
@@ -14,6 +14,8 @@
     "verbatimModuleSyntax": true,
     "noEmit": true,
 
+    "types": ["node"],
+
     // Best practices
     "strict": true,
     "skipLibCheck": true,
@@ -25,5 +27,7 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noPropertyAccessFromIndexSignature": false
-  }
+  },
+  "include": ["src/**/*.ts", "index.ts"],
+  "exclude": ["inspiration", "node_modules"]
 }
