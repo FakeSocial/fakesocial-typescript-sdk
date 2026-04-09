@@ -3,13 +3,13 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/fakesocial-typescript-sdk">
+  <a href="https://www.npmjs.com/package/fakesocial-ts">
     <img src="https://img.shields.io/npm/v/fakesocial-typescript-sdk?color=blue&label=npm" />
   </a>
-  <a href="https://www.npmjs.com/package/fakesocial-typescript-sdk">
+  <a href="https://www.npmjs.com/package/fakesocial-ts">
     <img src="https://img.shields.io/npm/dw/fakesocial-typescript-sdk?color=green&label=downloads" />
   </a>
-  <img src="https://img.shields.io/github/license/FakeSocial/fakesocial-typescript-sdk" />
+  <img src="https://img.shields.io/github/license/FakeSocial/fakesocial-ts" />
   <img src="https://img.shields.io/github/stars/FakeSocial/fakesocial-typescript-sdk?style=social" />
 </p>
 
