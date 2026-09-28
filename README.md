@@ -1,6 +1,14 @@
 <p align="center">
   <img src="./assets/banner.png" alt="FakeSocial Banner" />
 </p>
+
+> [!CAUTION]
+> **⚠️ Projet déprécié / Deprecated project**
+>
+> **FR :** FakeSocial (fakesocial.fr) a fermé. Ce SDK n'est plus maintenu, l'API est hors ligne et aucune nouvelle version ne sera publiée. Ne l'utilisez pas pour de nouveaux projets. Ce dépôt est conservé en lecture seule à titre d'archive.
+>
+> **EN:** FakeSocial (fakesocial.fr) has shut down. This SDK is no longer maintained, the API is offline, and no new releases will be published. Do not use it for new projects. This repository is kept read-only for archival purposes.
+
 <p align="center">
   Official TypeScript SDK for the FakeSocial API
 </p>

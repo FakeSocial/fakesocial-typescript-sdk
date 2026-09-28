@@ -3,6 +3,7 @@
   "module": "index.ts",
   "type": "module",
   "version": "0.9.9",
+  "deprecated": "FakeSocial (fakesocial.fr) has shut down — fakesocial-ts is deprecated and no longer maintained. The API is offline, do not use for new projects. / FakeSocial a fermé — fakesocial-ts est déprécié et n'est plus maintenu.",
   "repository": {
     "url": "https://github.com/FakeSocial/fakesocial-typescript-sdk"
   },
