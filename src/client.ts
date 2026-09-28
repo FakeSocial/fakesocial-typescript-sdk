@@ -24,6 +24,8 @@ import type { ClientOptions, QueryParams } from "./types";
 /**
  * High-level client for interacting with the Fake Social API.
  *
+ * @deprecated FakeSocial has shut down. This client is no longer maintained and the API is offline.
+ *
  * The client exposes auth, OAuth, user, content, moderation and platform methods
  * through strongly typed helper objects.
  */
@@ -212,6 +214,8 @@ export class FakeMediaClient {
 
 /**
  * Creates a new FakeMediaClient instance.
+ *
+ * @deprecated FakeSocial has shut down. Do not use for new projects.
  *
  * @param options - Client options used for initialization.
  * @returns A configured FakeMediaClient.
